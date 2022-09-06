@@ -1,11 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
+const style01 = {
+  backgroundColor: 'orange',
+  padding: '30px 20px'
+}
+
+const style02 =() =>({
+    boxShadow: '0px 3px 5px red'
+})
+
 const Li = ({ age, children, lastName }) => {
   return (
     // <li value={props.age}> Valor de li {props.children} | Last Name = {props.lastName}</li>
-    <li value={age}> Valor de li {children} | Last Name = {lastName}</li>
-
+    <li value={age} style={{...style01, ...style02()}}> Valor de li {children} | Last Name = {lastName}</li>
   )
 }
 
