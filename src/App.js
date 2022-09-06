@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+import './main.css';
 
 const style01 = {
   backgroundColor: 'orange',
@@ -13,7 +14,8 @@ const style02 =() =>({
 const Li = ({ age, children, lastName }) => {
   return (
     // <li value={props.age}> Valor de li {props.children} | Last Name = {props.lastName}</li>
-    <li value={age} style={{...style01, ...style02()}}> Valor de li {children} | Last Name = {lastName}</li>
+    // <li value={age} style={{...style01, ...style02()}}> Valor de li {children} | Last Name = {lastName}</li>
+    <li className="clase-li" value={age}>{children} | LastName={lastName}</li>
   )
 }
 
