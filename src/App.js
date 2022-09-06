@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 
+const Li = ({ age, children, lastName }) => {
+  return (
+    // <li value={props.age}> Valor de li {props.children} | Last Name = {props.lastName}</li>
+    <li value={age}> Valor de li {children} | Last Name = {lastName}</li>
+
+  )
+}
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ol>
+      <Li
+        age={3}
+        status={true}
+        lastName={'Rojas'}
+      >This is a item</Li>
+      <Li age={1}>
+        This a second item
+      </Li>
+    </ol>
   );
 }
 
